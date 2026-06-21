@@ -1,0 +1,6 @@
+[interfaces]
+  [[My RNS Gateway]]
+    type = TCPClientInterface
+    enabled = yes
+    target_host = YOUR_SERVER_IP
+    target_port = 4242
