@@ -1,0 +1,17 @@
+# Optional Fly.io example. Fly.io is not a guaranteed free/no-card option.
+# Copy to fly.toml only if you decide to use Fly.io.
+app = "your-rns-node"
+primary_region = "ams"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 4242
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[services.ports]]
+    port = 4242
